@@ -1,10 +1,10 @@
 {
-    "name": "ASPTT51",
-    "type": "library",
+    "name": "xmaillard/asptt51",
+    "type": "project",
     "description": "Code du site de l'ASPTT Athle chalons",
-    "keywords": ["microframework", "rest", "router","slim","twig","bootstrap"],
+    "keywords": ["association", "organization", "athletisme"],
     "homepage": "http://aspttathlechalons.com",
-    "license": "",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "Xavier Maillard",
@@ -17,7 +17,7 @@
         "slim/extras": "2.0.*",
         "slim/views":"0.1.*",
         "twig/twig": "1.*",
-        "twig/extensions": "*"
+        "twig/extensions": "1.*"
     },
     "config": {
         "preferred-install": "dist"
