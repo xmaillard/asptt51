@@ -1,0 +1,25 @@
+{
+    "name": "ASPTT51",
+    "type": "library",
+    "description": "Code du site de l'ASPTT Athle chalons",
+    "keywords": ["microframework", "rest", "router","slim","twig","bootstrap"],
+    "homepage": "http://aspttathlechalons.com",
+    "license": "",
+    "authors": [
+        {
+            "name": "Xavier Maillard",
+            "email": "xavier@maillard.im"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "slim/slim": "2.4.*",
+        "slim/extras": "2.0.*",
+        "slim/views":"0.1.*",
+        "twig/twig": "1.*",
+        "twig/extensions": "*"
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
