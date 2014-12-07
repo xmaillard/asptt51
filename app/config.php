@@ -71,6 +71,11 @@ $app->hook('slim.after.router', function () use ($app) {
 });
 
 
+// chargement de nos routes
+foreach(glob(APP_PATH . 'routes/*.php') as $route) {
+        include $route;
+}
+
 return $app;
 
 ?>
