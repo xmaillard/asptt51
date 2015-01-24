@@ -1,0 +1,821 @@
+body {
+	background: url('../../images/fond_jaune.png');
+	font-family: Trebuchet MS, Arial, sans-serif;
+	color: #181818;
+}
+
+#bloc_page {
+	width: 900px;
+	margin: auto;
+}
+
+#footer h1,#corps h1,#nav a {
+	font-family: Trebuchet MS, Arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#titre_principal {
+	display: inline-block;
+	background-color: #7cbc77;
+	background-image: url('images/logoASPTT.jpg');
+	width: 900px;
+	height: 65px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 2px #057c1e;
+}
+
+#titre_principal h1 {
+	font-family: Trebuchet MS, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #760001;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#nav {
+	display: inline-block;
+	width: 95%;
+	text-align: center;
+}
+
+#nav ul {
+	list-style-type: none;
+}
+
+#nav li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#nav a {
+	font-size: 1.2em;
+	color: #181818;
+	padding-bottom: 10px;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+/* Bannière */
+#banniere_image_marche {
+	margin-top: 15px;
+	height: 200px;
+	border-radius: 5px;
+	background: url('images/marche-nordique.jpg') no-repeat;
+	position: relative;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+
+#banniere_image_course {
+	margin-top: 15px;
+	height: 200px;
+	border-radius: 5px;
+	background: url('images/running.jpg') no-repeat;
+	position: relative;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+
+#banniere_description {
+	position: absolute;
+	bottom: 0;
+	border-radius: 0px 0px 5px 5px;
+	width: 99.5%;
+	height: 33px;
+	padding-top: 15px;
+	padding-left: 4px;
+	background-color: rgb(24, 24, 24); /* Pour les anciens navigateurs */
+	background-color: rgba(24, 24, 24, 0.8);
+	color: white;
+	font-size: 0.9em;
+}
+
+#banniere_description a {
+	color: white;
+	font-size: 1.0em;
+	text-decoration: none;
+}
+
+#banniere_description a:hover {
+	color: darkred;
+	font-size: 1.0em;
+	text-decoration: none;
+}
+
+#barre,#barre ul /* Liste */ {
+	padding: 0; /* pas de marge intérieure */
+	margin: 0; /* ni extérieure */
+	list-style: none; /* on supprime le style par défaut de la liste */
+	line-height: 21px; /* on définit une hauteur pour chaque élément */
+	text-align: center;
+	/* on centre le texte qui se trouve dans la liste */
+}
+
+#barre a /* Contenu des listes */ {
+	display: block;
+	/* on change le type d'élément, les liens deviennent des balises de type block */
+	padding: 0; /* aucune marge intérieure */
+	background: rgba(24, 24, 24, 0.6);
+	color: #fff; /* couleur du texte */
+	text-decoration: none;
+	/* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+	width: 150px; /* largeur */
+}
+
+#barre li /* Elements des listes */ {
+	float: left;
+	/* pour IE qui ne reconnaît pas "transparent" */
+	border-right: 1px solid #fff;
+	/* on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #barre li {
+	border-right: 1px solid transparent;
+	/* on met une bordure transparente à droite de chaque élément */
+}
+
+#barre li ul /* Sous-listes */ {
+	position: absolute; /* Position absolue */
+	width: 150px; /* Largeur des sous-listes */
+	left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#barre li ul li /* Éléments de sous-listes */ {
+	/* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+	border-top: 1px solid #fff;
+	/* on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #barre li ul li {
+	border-top: 1px solid transparent;
+	/* on met une bordure transparente en haut de chaque élément */
+}
+
+#barre li ul ul {
+	margin: -22px 0 0 144px;
+	/* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+	/* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+	border-left: 1px solid #fff;
+	/* Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #barre li ul ul {
+	border-left: 1px solid transparent;
+	/* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#barre a:hover /* Lorsque la souris passe sur un des liens */ {
+	color: #000; /* On passe le texte en noir... */
+	background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#barre li:hover ul ul
+	/* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+	{
+	left: -999em;
+	/* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#barre li:hover ul,#barre li li:hover ul
+	/* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+	{
+	left: auto; /* Repositionnement normal */
+	min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+.bouton_rouge {
+	display: inline-block;
+	height: 25px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	background: url('images/fond_degraderouge.png') repeat-x;
+	border: 1px solid #760001;
+	border-radius: 5px;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 3px 8px 0px 8px;
+	color: white;
+	text-decoration: none;
+}
+
+.bouton_rouge img {
+	border: 0;
+}
+
+#corps,#menu {
+	display: inline-block;
+	vertical-align: top;
+	text-align: justify;
+}
+
+#corps {
+	width: 625px;
+	margin-right: 15px;
+}
+
+#corps img {
+	text-align: center;
+	margin-top: 10px;
+	box-shadow: 0px 2px 2px black;
+}
+
+#corps h1 {
+	background: #7cbc77;
+	background-image: linear-gradient(60deg, #7cbc77, #98FB98);
+	font-size: 1.1em;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.2em black;
+	border-radius: 5px;
+	box-shadow: 0px 2px 2px black;
+}
+
+#corps h2 {
+	font-size: 1.0em;
+	font-weight: bold;
+	width: 40%;
+	color: white;
+	text-shadow: 0.1em 0.1em 0.1em black;
+	border-style: solid;
+	border-color: #B22222;
+	background-color: #B22222;
+	box-shadow: 0px 2px 2px black;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#corps h3 {
+	font-size: 1.0em;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.photo_cartouche,.texte_cartouche,.maxi_cartouche {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px, 0px, 0px, 0px;
+}
+
+.photo_cartouche {
+	width: 26%;
+	text-align: center;
+	height: 150px;
+}
+
+.texte_cartouche {
+	width: 73%;
+	background-color: #FDF5E6;
+	background: url('images/fond_jaune.png');
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px black;
+	height: 150px;
+}
+
+.maxi_cartouche {
+	width: 73%;
+	background-color: #FDF5E6;
+	background: url('images/fond_jaune.png');
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px black;
+	height: 220px;
+}
+
+.mini_cartouche {
+	vertical-align: top;
+	width: 100%;
+	background-color: #FDF5E6;
+	background: url('images/fond_jaune.png');
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px black;
+	height: 60px;
+}
+
+.result_cartouche {
+	width: 98%;
+	background-color: #FDF5E6;
+	background: url('images/fond_jaune.png');
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px black;
+	height: 160px;
+	padding-left: 15px;
+}
+
+#corps p {
+	font-size: 1.0em;
+}
+
+.pcartouche {
+	padding-left: 50px;
+}
+
+.pform {
+	text-align: center;
+}
+
+#corps .pp {
+	text-align: center;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: darkred;
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#corps .pp strong {
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #D2691E;
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#corps .ps {
+	width: 85%;
+	text-align: center;
+	font-size: 2.1em;
+	font-weight: bold;
+	color: white;
+	background: #228B22;
+	text-shadow: 0.1em 0.1em 0.2em black;
+	border: 1px solid darkgreen;
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px black;
+}
+
+#corps a {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+
+#corps a:hover {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #006400;
+	text-decoration: none;
+}
+
+#corps table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 900px;
+	box-shadow: 0px 1px 1px black;
+	border: 1px solid #B22222;
+	border-radius: 5px;
+}
+
+#corps td {
+	max-width: 500px;
+	border: 1px solid dashed;
+}
+
+.titre_table {
+	max-width: 900px;
+	background: #7cbc77;
+	background-image: linear-gradient(60deg, #98FB98, #F5F5DC);
+	color: #B22222;
+	font-weight: bold;
+}
+
+.label_tr {
+	background: #F5F5DC;
+	background: url('images/fond_jaune.png');
+	color: black;
+	padding: 10px, 5px, 10px, 5px;
+}
+
+.principal_td {
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+	color: #006400;
+	padding: 10px;
+}
+
+.principal_td_bis {
+	width: 75%;
+	font-weight: bold;
+	text-align: left;
+	color: #006400;
+	padding: 10px;
+}
+
+.mess_td {
+	padding: 10px;
+	width: 70%;
+}
+
+.bouton {
+	display: inline-block;
+	/*height: 25px;
+    width : 280px;
+    left: 30%;
+    background-color : #F5F5DC;
+    background-image:linear-gradient(60deg, #F5F5DC, gray);
+    border: 1px solid #006400;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 1px 1px black;*/
+	margin-left: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+	text-transform: capitalize;
+	padding: 6px 0 6px 0;
+	font: bold 13px;
+	background: #f5f5f5;
+	color: #555;
+	border-radius: 2px;
+	width: 280px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 3px #999;
+	text-align: center;
+}
+
+form {
+	padding: 0px;
+	width: 100%;
+}
+
+fieldset {
+	border: 1px solid #006400;
+}
+
+legend {
+	color: #006400;
+	font-weight: bold;
+}
+
+label {
+	font-size: 0.8em;
+	display: inline;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+input[type=submit],input[type=reset] {
+	width: 120px;
+	height: 35px;
+	margin: 10px auto 0px auto;
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid #006400;
+}
+
+input[id=lien] {
+	cursor: pointer;
+	display: inline-block;
+	border: 0px;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	font-family: Trebuchet MS, Arial, sans-serif;
+	width: 60px;
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+select[id=course],select[id=athlete],select[id=course_suppr],select[id=adherent],select[id=entraineur],select[id=competition],select[id=parcours]
+	{
+	margin-top: 10px;
+	background: #F5F5DC;
+	width: 450px;
+	height: 25px;
+	padding: 2px;
+	font-size: 1.1em;
+	border: 1px solid #006400;
+	height: 34px;
+	color: black;
+}
+
+select[id=prise] {
+	width: 80px;
+	background: #F5F5DC;
+	height: 25px;
+	padding: 2px;
+	font-size: 1.1em;
+	border: 1px solid #006400;
+	height: 25px;
+	color: black;
+}
+
+select[id=seance],select[id=type] {
+	width: 180px;
+	background: #F5F5DC;
+	height: 25px;
+	padding: 2px;
+	font-size: 1.0em;
+	border: 1px solid #006400;
+	height: 25px;
+	color: black;
+}
+
+input[type=text],input[type=date],input[type=password] {
+	background: #F5F5DC;
+	border: 1px solid #006400;
+	height: 25px;
+}
+
+textarea {
+	background: #F5F5DC;
+	border: 1px solid #006400;
+}
+
+.inscrit {
+	text-align: center;
+}
+
+#menu {
+	position: relative;
+	width: 235px;
+	height: 100%;
+	background: #7cbc77;
+	background-image: linear-gradient(60deg, #7cbc77, #98FB98);
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+	color: #006400;
+	font-size: 0.9em;
+}
+
+#menu h1 {
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#menu h2 {
+	text-align: left;
+	font-size: 0.9em;
+	color: #760001;
+	font-family: 'Helvetica', Arial, sans-serif;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+#menu a {
+	font-size: 1.0em;
+	color: darkred;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#menu a:hover {
+	font-size: 1.0em;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+#footer {
+	padding-top: 25px;
+	width: 900px;
+	margin: 0px;
+}
+
+#footer p {
+	font-size: 0.8em;
+}
+
+#footer ul {
+	font-size: 0.7em;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0;
+	width: 48%;
+	padding-left: 2px;
+	list-style-type: none;
+}
+
+#footer li {
+	padding-bottom: 3px;
+}
+
+#footer h1 {
+	font-size: 1.1em;
+	padding-left: 14px;
+	color: #006400;
+}
+
+#encart1,#encart2,#encart3 {
+	display: inline-block;
+	vertical-align: top;
+	background: #DCDCDC;
+	margin: 2px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 2px black;
+	width: 292px;
+}
+
+#footer a {
+	text-decoration: none;
+	color: black;
+}
+
+#footer a:hover {
+	text-decoration: none;
+	color: #760001;
+}
+
+#resultat table {
+	border-collapse: collapse;
+	border: 1px solid #03476F;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	color: #363636;
+	background: #DCDCDC;
+}
+
+#resultat caption {
+	text-align: center;
+	font: bold 18px arial, helvetica, sans-serif;
+	background: transparent;
+	padding: 6px 4px 8px 0px;
+	color: #03476F;
+	text-transform: uppercase;
+}
+
+#resultat td,th {
+	border: 1px dotted #03476F;
+	padding: .4em;
+	color: #363636;
+	text-align: center;
+}
+
+#resultat thead th,tfoot th {
+	font: bold 11px verdana, arial, helvetica, sans-serif;
+	border: 1px solid #03476F;
+	text-align: center;
+	background: #7cbc77;
+	color: #FFFFFF;
+	padding-top: 3px;
+}
+
+#resultat tbody td a {
+	background: transparent;
+	text-decoration: none;
+	color: #363636;
+}
+
+#resultat tbody td a:hover {
+	background: #C2F64D;
+	color: #363636;
+}
+
+#resultat tbody th a {
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	background: transparent;
+	text-decoration: none;
+	font-weight: normal;
+	color: #363636;
+}
+
+#resultat tbody th a:hover {
+	background: transparent;
+	color: #363636;
+}
+
+#resultat tbody th,tbody td {
+	vertical-align: top;
+	text-align: left;
+}
+
+#resultat tfoot td {
+	border: 1px solid #03476F;
+	background: #7cbc77;
+	padding-top: 3px;
+	color: #FFFFFF;
+}
+
+#resultat tbody tr:hover {
+	background: #FFD800;
+	border: 1px solid #03476F;
+	color: #FFFFFF;
+}
+
+#resultat tbody tr:hover th,tbody tr.odd:hover th {
+	background: #FFD800;
+	color: #FFFFFF;
+}
+
+#copyright {
+	width: 100%;
+	text-align: right;
+	font-size: 0.7em;
+}
+
+#copyright a {
+	text-decoration: none;
+	color: #363636;
+}
+
+div.bulle {
+   width: auto;
+   font-size: 0.75em;
+   margin-bottom: 24px;
+}
+div.bulle blockquote {
+   margin: 0px;
+   padding: 0px;
+   border: 1px solid #c9c2c1;
+   background-color: #fff;
+}
+div.bulle blockquote p {
+   margin: 10px;
+   padding: 0px;
+}
+div.bulle cite {
+   position: relative;
+   margin: 0px;
+   padding: 5px 0px 10px 15px;
+   top: -5px;
+   background: transparent url(images/FlecheBulle.gif) no-repeat 20px 22px;
+   font-style: normal;
+}
+
+.tooltip
+{
+  text-decoration:none;
+  position:relative;
+}
+
+.tooltip span
+{
+  display:none;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  color:black;
+  background:white;
+}
+
+.tooltip span img
+{
+  float:left;
+  margin:0px 8px 8px 0;
+}
+
+.tooltip:hover span
+{
+  display:block;
+  position:absolute;
+  top:20;
+  left:30;
+  z-index:1000;
+  width:auto;
+  max-width:320px;
+  min-height:128px;
+  border:1px solid black;
+  margin-top:12px;
+  margin-left:32px;
+  overflow:hidden;
+  padding:8px;
+}
+
+/*span {
+	margin-top: 23px;
+	margin-left: -35px;
+	color: #09c;
+	background: rgba(0, 0, 0, .9);
+	padding: 15px;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+	opacity: 1;
+}
+
+span:after {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-bottom-color: #292a29;
+	border-width: 4px 0px 4px 4px;
+	left : 0;
+	margin-left: -4px;
+	bottom: 12px;
+}*/
